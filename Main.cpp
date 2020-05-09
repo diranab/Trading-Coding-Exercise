@@ -7,6 +7,7 @@
 
 int main()
 {
+	std::cout << ">>Starting application\n";
 	std::unique_ptr<Financial_Instrument_Manager> tradeManager(new Financial_Instrument_Manager());
 	tradeManager->processTradeStream();
 

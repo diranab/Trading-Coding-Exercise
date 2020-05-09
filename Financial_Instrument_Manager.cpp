@@ -21,6 +21,7 @@ void Financial_Instrument_Manager::readTradeStream()
 
 	if (input_file)
 	{
+		std::cout << ">>Opening input file and Processing trade streams...\n";
 		while (std::getline(input_file, rowStr))
 		{
 			std::stringstream row(rowStr);
@@ -71,10 +72,11 @@ void Financial_Instrument_Manager::readTradeStream()
 				itr->second->updateMax_timeGap();
 			}
 		}
+		std::cout << ">>Trade stream processing complete!\n";
 	}
 	else
 	{
-		std::cout << "unable to open file\n";
+		std::cout << ">>unable to open file\n";
 	}
 }
 
@@ -85,6 +87,8 @@ void Financial_Instrument_Manager::writeTradeResult()
 
 	if (!outFile.bad())
 	{
+		std::cout << ">>Creating output file...\n";
+
 		//add header
 		outFile << "symbol," << "MaxTimeGap," << "Volume," << "WeightedAveragePrice," << "MaxPrice\n";
 
@@ -97,11 +101,11 @@ void Financial_Instrument_Manager::writeTradeResult()
 			outFile << itr->second->getMax_price() << "\n";			//Max Price
 		}
 
-		std::cout << "data successfully written to file\n";
+		std::cout << ">>data successfully written to file\n";
 		outFile.close();
 	}
 	else
 	{
-		std::cout << "unable to write file\n";
+		std::cout << ">>unable to write file\n";
 	}
 }
