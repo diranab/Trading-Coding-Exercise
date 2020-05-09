@@ -1,3 +1,8 @@
+TIME TO COMPLETE
+- rough working code completed in 2 hours 48 minutes
+- additional 40 minutes to clean up code
+
+
 This application reads an input file('input.csv') and writes out a new file ('output.csv') calculated from the inputs.
 Input:
 The input file represents a very simplified stream of trades on an exchange.  
