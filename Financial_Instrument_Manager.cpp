@@ -81,7 +81,7 @@ void Financial_Instrument_Manager::readTradeStream()
 
 void Financial_Instrument_Manager::writeTradeResult()
 {
-	std::ofstream outFile("QuantLab_codingExercise\\output.csv");
+	std::ofstream outFile(output_fileName);
 
 	if (!outFile.bad())
 	{

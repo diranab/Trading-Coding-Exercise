@@ -20,9 +20,9 @@ private:
 	void writeTradeResult();
 
 public:
-	Financial_Instrument_Manager(std::string input_file, std::string output_file)
-		: input_fileName(input_file),
-		output_fileName(output_file)
+	Financial_Instrument_Manager()
+		: input_fileName("input.csv"),
+		output_fileName("output.csv")
 	{}
 
 	//read trade stream and write result in output file
